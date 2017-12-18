@@ -1,0 +1,5 @@
+characteristic SME_NO_WORKPLACES_NF {
+	name 'Number of workplaces'
+	numericLength 15 decimalPlaces 0
+	intervals >=1
+}

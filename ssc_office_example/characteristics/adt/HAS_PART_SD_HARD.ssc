@@ -1,0 +1,5 @@
+characteristic HAS_PART_SD_HARD {
+	name 'has part (hard)'
+	classType SME_CONTAINMENT
+	multiValue
+}

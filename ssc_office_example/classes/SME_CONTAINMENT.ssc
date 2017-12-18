@@ -1,0 +1,9 @@
+class SME_CONTAINMENT extends SME_ANY {
+	name 'Containment'
+	characteristics
+		HAS_PART_SD_SOFT invisible,
+		IS_PART_OF_SD_SOFT invisible,
+		HAS_PART_SD_HARD invisible,
+		IS_PART_OF_SD_HARD invisible,
+		IS_ITEM_OF_SV invisible
+}

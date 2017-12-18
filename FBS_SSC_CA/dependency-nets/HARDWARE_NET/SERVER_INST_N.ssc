@@ -1,0 +1,132 @@
+constraint STD_SELF_INST_N {
+  objects:
+    ?S is_a (300) FBS_SSC_CA
+       where ?SRV = STD_SELF_SERVERS_ADT
+
+  condition:
+    ?SRV.INST_NUM < ?S.STD_SELF_INST_SELECT
+  restrictions:
+   
+    find_or_create (
+    (300) SERVER,
+    with  
+       INST_NUM = ?SRV.INST_NUM + 1;
+       SERVER_NAME = ?S.STD_SELF_SERVER_NAME;
+       USER_TYPE = 'STD_SELF';
+       IS_PART_OF_SD_SOFT = ?S;
+       SERVER_IN_SOL_ADT = ?S 
+     )
+
+  explanations: 
+    "create as many instances as are selected in the INST_SELECT fields"
+}
+constraint SCM_SELF_INST_N {
+  objects:
+    ?S is_a (300) FBS_SSC_CA
+       where ?SRV = SCM_SELF_SERVERS_ADT
+
+  condition:
+    ?SRV.INST_NUM < ?S.SCM_SELF_INST_SELECT
+  restrictions:
+   
+    find_or_create (
+    (300) SERVER,
+    with  
+       INST_NUM = ?SRV.INST_NUM + 1;
+       SERVER_NAME = ?S.SCM_SELF_SERVER_NAME;
+       USER_TYPE = 'SCM_SELF';
+       IS_PART_OF_SD_SOFT = ?S;
+       SERVER_IN_SOL_ADT = ?S 
+     )
+
+  explanations: 
+    "create as many instances as are selected in the INST_SELECT fields"
+}
+constraint PM_SELF_INST_N {
+  objects:
+    ?S is_a (300) FBS_SSC_CA
+       where ?SRV = PM_SELF_SERVERS_ADT
+
+  condition:
+    ?SRV.INST_NUM < ?S.PM_SELF_INST_SELECT
+  restrictions:
+   
+    find_or_create (
+    (300) SERVER,
+    with  
+       INST_NUM = ?SRV.INST_NUM + 1;
+       SERVER_NAME = ?S.PM_SELF_SERVER_NAME;
+       USER_TYPE = 'PM_SELF';
+       IS_PART_OF_SD_SOFT = ?S;
+       SERVER_IN_SOL_ADT = ?S 
+     )
+
+  explanations: 
+    "create as many instances as are selected in the INST_SELECT fields"
+}
+constraint CRM_SALES_INST_N {
+  objects:
+    ?S is_a (300) FBS_SSC_CA
+       where ?SRV = CRM_SALES_SERVERS_ADT
+
+  condition:
+    ?SRV.INST_NUM < ?S.CRM_SALES_INST_SELECT
+  restrictions:
+   
+    find_or_create (
+    (300) SERVER,
+    with  
+       INST_NUM = ?SRV.INST_NUM + 1;
+       SERVER_NAME = ?S.CRM_SALES_SERVER_NAME;
+       USER_TYPE = 'CRM_SALES';
+       IS_PART_OF_SD_SOFT = ?S;
+       SERVER_IN_SOL_ADT = ?S 
+     )
+
+  explanations: 
+    "create as many instances as are selected in the INST_SELECT fields"
+}
+constraint STD_SALES_INST_N {
+  objects:
+    ?S is_a (300) FBS_SSC_CA
+       where ?SRV = STD_SALES_SERVERS_ADT
+
+  condition:
+    ?SRV.INST_NUM < ?S.STD_SALES_INST_SELECT
+  restrictions:
+   
+    find_or_create (
+    (300) SERVER,
+    with  
+       INST_NUM = ?SRV.INST_NUM + 1;
+       SERVER_NAME = ?S.STD_SALES_SERVER_NAME;
+       USER_TYPE = 'STD_SALES';
+       IS_PART_OF_SD_SOFT = ?S;
+       SERVER_IN_SOL_ADT = ?S 
+     )
+
+  explanations: 
+    "create as many instances as are selected in the INST_SELECT fields"
+}
+constraint SCM_SALES_INST_N {
+  objects:
+    ?S is_a (300) FBS_SSC_CA
+       where ?SRV = SCM_SALES_SERVERS_ADT
+
+  condition:
+    ?SRV.INST_NUM < ?S.SCM_SALES_INST_SELECT
+  restrictions:
+   
+    find_or_create (
+    (300) SERVER,
+    with  
+       INST_NUM = ?SRV.INST_NUM + 1;
+       SERVER_NAME = ?S.SCM_SALES_SERVER_NAME;
+       USER_TYPE = 'SCM_SALES';
+       IS_PART_OF_SD_SOFT = ?S;
+       SERVER_IN_SOL_ADT = ?S 
+     )
+
+  explanations: 
+    "create as many instances as are selected in the INST_SELECT fields"
+}

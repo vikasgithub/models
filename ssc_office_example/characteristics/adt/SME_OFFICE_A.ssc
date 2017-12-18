@@ -1,0 +1,4 @@
+characteristic SME_OFFICE_A {
+	name 'Office'
+	classType SME_OFFICE
+}

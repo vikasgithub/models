@@ -1,0 +1,28 @@
+constraint SME_COMPUTER_INT_DEPS_CS {
+	name 'SME_COMPUTER_INT_DEPS_CS'
+	objects
+		?C is_a (300)SME_COMPUTER,
+		?W is_a (300)SME_WORKPLACE
+
+	condition
+		part_of(?C, ?W)
+
+	restrictions
+		// restrict type of computer
+		?C.domain SME_COMPUTER_TYPE_S in ['DESKTOP','LAPTOP']
+			if ?W.SME_WORKPLACE_TYPE_NS = 'OFFICE',
+		?C.domain SME_COMPUTER_TYPE_S in ['WORKSTATION']
+			if ?W.SME_WORKPLACE_TYPE_NS = 'CAD',
+		// prepapre creation of parts for memory
+		table SME_MEMORY_D
+		(
+			SME_MEMORY_S = ?C.SME_MEMORY_S,
+			SME_MEMORY_SIZE_F = ?C.domain SME_MEMORY_SIZE_F,
+			SME_MEMORY_SPEED_S = ?C.domain SME_MEMORY_SPEED_S
+		)
+
+	inferences
+		?C.domain SME_COMPUTER_TYPE_S,
+		?C.domain SME_MEMORY_SIZE_F,
+		?C.domain SME_MEMORY_SPEED_S
+}

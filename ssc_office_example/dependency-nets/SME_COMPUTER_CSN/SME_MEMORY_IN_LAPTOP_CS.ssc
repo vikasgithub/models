@@ -1,0 +1,43 @@
+constraint SME_MEMORY_IN_LAPTOP_CS {
+	name 'SME_MEMORY_IN_LAPTOP_CS'
+	objects
+		?L is_object (material)(300)(nr=SME_LAPTOP)
+
+	restrictions
+		has_part
+		(
+			?L,
+			pos_type = (material)(300)(nr=SME_MEMORY),
+			with
+				SME_IS_A = 'PART';
+				SME_INSTANCE_NF = 0;
+				SME_MEMORY_SPEED_S = ?L.SME_MEMORY_SPEED_S
+		) if ?L.SME_MEMORY_SIZE_F > 0,
+		has_part
+		(
+			?L,
+			pos_type = (material)(300)(nr=SME_MEMORY),
+			with
+				SME_IS_A = 'PART';
+				SME_INSTANCE_NF = 1;
+				SME_MEMORY_SPEED_S = ?L.SME_MEMORY_SPEED_S
+		) if ?L.SME_MEMORY_SIZE_F > 1,
+		has_part
+		(
+			?L,
+			pos_type = (material)(300)(nr=SME_MEMORY),
+			with
+				SME_IS_A = 'PART';
+				SME_INSTANCE_NF = 2;
+				SME_MEMORY_SPEED_S = ?L.SME_MEMORY_SPEED_S
+		) if ?L.SME_MEMORY_SIZE_F > 2,
+		has_part
+		(
+			?L,
+			pos_type = (material)(300)(nr=SME_MEMORY),
+			with
+				SME_IS_A = 'PART';
+				SME_INSTANCE_NF = 3;
+				SME_MEMORY_SPEED_S = ?L.SME_MEMORY_SPEED_S
+		) if ?L.SME_MEMORY_SIZE_F > 3	
+}

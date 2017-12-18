@@ -1,0 +1,11 @@
+constraint SME_PROCESSOR_SURCHARGE_CS {
+	objects:
+		?C is_a (300)SME_COMPUTER
+
+	restrictions:
+		?C.SME_SURCHARGE = 'MAINBOARD_DUAL'
+			if ?C.SME_PROCESSOR_S in
+			['DUAL_2_4','DUAL_2_8','DUAL_3_0','DUAL_3_6'],
+		?C.SME_SURCHARGE = 'MAINBOARD_QUAD'
+			if ?C.SME_PROCESSOR_S in ['QUAD_2_8','QUAD_3_1','QUAD_3_4']
+}

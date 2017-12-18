@@ -1,0 +1,7 @@
+material SME_OFFICE {
+	name 'Office'
+	classes
+		SME_OFFICE
+	boms
+		SME_OFFICE
+}

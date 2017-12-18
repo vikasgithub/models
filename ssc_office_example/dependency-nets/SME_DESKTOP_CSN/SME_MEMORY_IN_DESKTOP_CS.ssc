@@ -1,0 +1,45 @@
+constraint SME_MEMORY_IN_DESKTOP_CS {
+	name 'SME_MEMORY_IN_DESKTOP_CS'
+	objects
+		?D is_object (material)(300)(nr=SME_DESKTOP)
+
+	condition
+
+	restrictions
+		has_part
+		(
+			?D,
+			pos_type = (material)(300)(nr=SME_MEMORY),
+			with
+				SME_IS_A = 'PART';
+				SME_INSTANCE_NF = 0;
+				SME_MEMORY_SPEED_S = ?D.SME_MEMORY_SPEED_S
+		) if ?D.SME_MEMORY_SIZE_F > 0,
+		has_part
+		(
+			?D,
+			pos_type = (material)(300)(nr=SME_MEMORY),
+			with
+				SME_IS_A = 'PART';
+				SME_INSTANCE_NF = 1;
+				SME_MEMORY_SPEED_S = ?D.SME_MEMORY_SPEED_S
+		) if ?D.SME_MEMORY_SIZE_F > 1,
+		has_part
+		(
+			?D,
+			pos_type = (material)(300)(nr=SME_MEMORY),
+			with
+				SME_IS_A = 'PART';
+				SME_INSTANCE_NF = 2;
+				SME_MEMORY_SPEED_S = ?D.SME_MEMORY_SPEED_S
+		) if ?D.SME_MEMORY_SIZE_F > 2,
+		has_part
+		(
+			?D,
+			pos_type = (material)(300)(nr=SME_MEMORY),
+			with
+				SME_IS_A = 'PART';
+				SME_INSTANCE_NF = 3;
+				SME_MEMORY_SPEED_S = ?D.SME_MEMORY_SPEED_S
+		) if ?D.SME_MEMORY_SIZE_F > 3
+}

@@ -1,0 +1,7 @@
+material SME_WORKPLACE {
+	name 'Workplace'
+	classes
+		SME_WORKPLACE
+	boms
+		SME_WORKPLACE
+}

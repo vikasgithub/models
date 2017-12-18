@@ -1,0 +1,15 @@
+kbName "FBS_SSC_CA_KB" ;
+kbVersion "0.0.2.8" ;
+kbProfile "FBS_SSC_CA_M_PRF" ;
+databaseName "db01" ;
+databaseHostname "localhost" ;
+databasePort "1433" ;
+databaseUser "sa" ;
+setValues "500" onCharacteristic "STD_SELFSERV_USERS" inInstance "1-FBS_SSC_CA_KB$1" ;
+createNonPartInstance "1-FBS_SSC_CA_KB|HARDWARE|38" ;
+createNonPartInstance "1-FBS_SSC_CA_KB|BL_SYS_460C_G7|18" ;
+createNonPartInstance "1-FBS_SSC_CA_KB|BLADE_DATA|1" ;
+setValues "BL280CG6" onCharacteristic "BLADE_NAME" inInstance "1-FBS_SSC_CA_KB$5" ;
+setValues "BL460CG7" onCharacteristic "STD_SELF_SERVER_NAME" inInstance "1-FBS_SSC_CA_KB$1" ;
+setValues "3.0" onCharacteristic "STD_SELF_INST_SELECT" inInstance "1-FBS_SSC_CA_KB$1" ;
+createNonPartInstance "1-FBS_SSC_CA_KB|BL_SYS_685C_G7|44" ;

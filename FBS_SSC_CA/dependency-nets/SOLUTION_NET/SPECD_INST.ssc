@@ -1,0 +1,47 @@
+/* constraint SPECD_INST {
+  objects:
+    ?S is_object (material)(300)(nr=FBS_SSC_CA)
+  condition:
+  // number of users per type
+        ?S.STD_SELF_INST_SELECT     specified
+     or ?S.SCM_SELF_INST_SELECT     specified
+     or ?S.PM_SELF_INST_SELECT      specified    
+     or ?S.CRM_SALES_INST_SELECT    specified
+     or ?S.STD_SALES_INST_SELECT    specified
+     or ?S.SCM_SALES_INST_SELECT    specified
+     
+    
+  restrictions:
+// set specd? indicators
+     ?S.STD_SELF_INST_SPECD ='YES'
+       if ?S.STD_SELF_INST_SELECT specified,
+       
+     ?S.SCM_SELF_INST_SPECD ='YES'
+       if ?S.SCM_SELF_INST_SELECT specified,
+       
+     ?S.PM_SELF_INST_SPECD ='YES'
+       if ?S.PM_SELF_INST_SELECT specified,
+           
+     ?S.CRM_SALES_INST_SPECD ='YES'
+       if ?S.CRM_SALES_INST_SELECT specified,
+            
+     ?S.STD_SALES_INST_SPECD ='YES'
+       if ?S.STD_SALES_INST_SELECT specified,
+           
+     ?S.SCM_SALES_INST_SPECD ='YES'
+       if ?S.SCM_SALES_INST_SELECT specified  
+       
+  
+ inferences:
+
+     ?S.STD_SELF_INST_SPECD
+     ,?S.SCM_SELF_INST_SPECD
+     ,?S.PM_SELF_INST_SPECD
+     ,?S.CRM_SALES_INST_SPECD
+     ,?S.STD_SALES_INST_SPECD
+     ,?S.SCM_SALES_INST_SPECD
+     
+  explanations: 
+    "Hide Server Names til user num specd,
+    Hide Inst nums til server name and user num picked."
+} */

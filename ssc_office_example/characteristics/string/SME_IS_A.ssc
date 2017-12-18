@@ -1,0 +1,7 @@
+characteristic SME_IS_A {
+	name "is a"
+	textLength 30
+	values
+		"PART" name "part",
+		"NON_PART" name "non-part"
+}

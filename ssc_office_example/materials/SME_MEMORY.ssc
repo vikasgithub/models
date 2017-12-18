@@ -1,0 +1,5 @@
+material SME_MEMORY {
+	classes
+		SME_MEMORY,
+		SME_CONTAINMENT
+}

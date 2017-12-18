@@ -1,0 +1,2 @@
+the table in ECC that needs to have an entry pointing to the EJB-IPC is CUCFGSW.
+Run report program ‘RCUIPCSWITCH’ in ECC, for each material that will use the EJB-IPC

@@ -1,0 +1,17 @@
+constraint SME_PROCESSOR_IN_LAPTOP_CS {
+	name 'SME_PROCESSOR_IN_LAPTOP_CS'
+	objects
+		?L is_object (material)(300)(nr=SME_LAPTOP)
+
+	condition
+
+	restrictions
+		has_part
+		(
+			?L,
+			pos_type = (material)(300)(nr=SME_PROCESSOR),
+			with
+				SME_IS_A = 'PART';
+				SME_PROCESSOR_S = ?L.SME_PROCESSOR_S
+		)
+}

@@ -1,0 +1,4 @@
+characteristic SME_INSTANCE_NF {
+	name 'Instance'
+	numericLength 2 decimalPlaces 0
+}

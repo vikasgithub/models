@@ -1,0 +1,11 @@
+constraint SME_LINK_INTERNET_CONN_CS {
+	objects
+		?C is_a (300)SME_COMPUTER,
+		?I is_a (300)SME_INTERNET_CONN
+
+	condition
+		?I.HAS_ITEM_SV = ?C
+
+	restrictions:
+		?C.IS_ITEM_OF_SV = ?I
+}

@@ -1,0 +1,12 @@
+constraint SME_SET_SALES_ADTS {
+	objects:
+		?A is_a (300)SME_CONTAINMENT,
+		?B is_a (300)SME_CONTAINMENT
+
+	restrictions:
+		?B.IS_PART_OF_SD_SOFT = ?A if ?A.HAS_PART_SD_SOFT = ?B,
+		?B.HAS_PART_SD_SOFT = ?A if ?A.IS_PART_OF_SD_SOFT = ?B,
+
+		?B.IS_PART_OF_SD_HARD = ?A if ?A.HAS_PART_SD_HARD = ?B,
+		?B.HAS_PART_SD_HARD = ?A if ?A.IS_PART_OF_SD_HARD = ?B
+}

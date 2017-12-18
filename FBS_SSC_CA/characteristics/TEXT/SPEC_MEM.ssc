@@ -1,0 +1,7 @@
+characteristic SPEC_MEM {
+	name "Amount of Memory selected by "
+	textLength 4
+	restrictable  
+	values 'IPC'  name 'System'
+	      ,'USER' name 'User'   
+}

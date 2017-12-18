@@ -1,0 +1,6 @@
+class SME_VIDEO_CARD extends SME_PART {
+	name 'Video card'
+	characteristics
+		SME_VIDEO_CARD_S required,
+		SME_PART_NUMBER_S required
+}

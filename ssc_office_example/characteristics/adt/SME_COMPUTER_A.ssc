@@ -1,0 +1,4 @@
+characteristic SME_COMPUTER_A {
+	name 'Computer'
+	classType SME_COMPUTER
+}

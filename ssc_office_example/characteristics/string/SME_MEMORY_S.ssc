@@ -1,0 +1,12 @@
+characteristic SME_MEMORY_S {
+	name 'Memory'
+	textLength 30
+	restrictable
+	values 
+		'1_1333' name '1GB (1333MHz)' vcond 'MEM_1_1333',
+		'2_1333' name '2GB (1333MHz)' vcond 'MEM_2_1333',
+		'2_1600' name '2GB (1600MHz)' vcond 'MEM_2_1600',
+		'2_2000' name '2GB (2000MHz)' vcond 'MEM_2_2000',
+		'4_1600' name '4GB (1600MHz)' vcond 'MEM_4_1600',
+		'4_2000' name '4GB (2000MHz)' vcond 'MEM_4_2000'
+}

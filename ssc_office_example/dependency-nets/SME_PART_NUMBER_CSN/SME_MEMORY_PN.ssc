@@ -1,0 +1,17 @@
+constraint SME_MEMORY_PN {
+	name 'SME_MEMORY_PN'
+	objects
+		?P is_a (300)SME_MEMORY
+
+	condition
+
+	restrictions
+		table SME_MEMORY_PN
+		(
+			SME_MEMORY_SPEED_S = ?P.SME_MEMORY_SPEED_S,
+			SME_PART_NUMBER_S = ?P.SME_PART_NUMBER_S
+		)
+
+	inferences
+		?P.SME_PART_NUMBER_S
+}

@@ -1,0 +1,84 @@
+constraint SERVER_INST_1 {
+  objects:
+    ?S is_a (300) FBS_SSC_CA
+    
+  condition:
+    (?S.STD_SELF_INST_SELECT specified or
+    ?S.SCM_SELF_INST_SELECT specified or
+    ?S.PM_SELF_INST_SELECT specified or
+    ?S.CRM_SALES_INST_SELECT specified or
+    ?S.STD_SALES_INST_SELECT specified or
+    ?S.SCM_SALES_INST_SELECT specified) 
+
+  restrictions:
+   
+    find_or_create (
+    (300) SERVER,
+    with  
+       INST_NUM = 1;
+       SERVER_NAME = ?S.STD_SELF_SERVER_NAME;
+       USER_TYPE = 'STD_SELF';
+       IS_PART_OF_SD_SOFT = ?S;
+       SERVER_IN_SOL_ADT = ?S 
+     )
+       if ?S.STD_SELF_INST_SELECT specified,
+
+    find_or_create (
+    (300) SERVER,
+    with  
+       INST_NUM = 1;
+       SERVER_NAME = ?S.SCM_SELF_SERVER_NAME;
+       USER_TYPE = 'SCM_SELF';
+       IS_PART_OF_SD_SOFT = ?S;
+       SERVER_IN_SOL_ADT = ?S
+     )
+       if ?S.SCM_SELF_INST_SELECT specified,
+
+    find_or_create (
+    (300) SERVER,
+    with  
+       INST_NUM = 1;
+       SERVER_NAME = ?S.PM_SELF_SERVER_NAME;
+       USER_TYPE = 'PM_SELF';
+       IS_PART_OF_SD_SOFT = ?S;
+       SERVER_IN_SOL_ADT = ?S
+     )
+       if ?S.PM_SELF_INST_SELECT specified,
+
+    find_or_create (
+    (300) SERVER,
+    with  
+       INST_NUM = 1;
+       SERVER_NAME = ?S.CRM_SALES_SERVER_NAME;
+       USER_TYPE = 'CRM_SALES';
+       IS_PART_OF_SD_SOFT = ?S;
+       SERVER_IN_SOL_ADT = ?S
+     )
+       if ?S.CRM_SALES_INST_SELECT specified,
+
+    find_or_create (
+    (300) SERVER,
+    with  
+       INST_NUM = 1;
+       SERVER_NAME = ?S.STD_SALES_SERVER_NAME;
+       USER_TYPE = 'STD_SALES';
+       IS_PART_OF_SD_SOFT = ?S;
+       SERVER_IN_SOL_ADT = ?S
+     )
+       if ?S.STD_SALES_INST_SELECT specified,
+
+    find_or_create (
+    (300) SERVER,
+    with  
+       INST_NUM = 1;
+       SERVER_NAME = ?S.SCM_SALES_SERVER_NAME;
+       USER_TYPE = 'SCM_SALES';
+       IS_PART_OF_SD_SOFT = ?S;
+       SERVER_IN_SOL_ADT = ?S
+     )
+       if ?S.SCM_SALES_INST_SELECT specified
+ 
+
+  explanations: 
+    "create as many instances as are selected in the INST_SELECT fields, this is the first one"
+}

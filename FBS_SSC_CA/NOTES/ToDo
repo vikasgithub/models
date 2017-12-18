@@ -1,0 +1,15 @@
+1. (done)-Satisfy Mem reqmt
+2. (done)-Satisfy CPU reqmt
+3. (done)-generate Server materials
+reinstall all.  or have malar check the install.  enable Export/Import!!!!!!!!
+4. import Eberhard's classical KB's
+5. configure material using Classical KB's
+------
+6. (done)add software
+7. add services
+   7.1 create service instances
+   
+   when hardware linked to multiple services, or service hooked to multiple HW,
+   then cant undo it??????????????/
+   same true for Software.
+   can unselect ALL, but not 1 of 2 (flashes gone, but then back again)

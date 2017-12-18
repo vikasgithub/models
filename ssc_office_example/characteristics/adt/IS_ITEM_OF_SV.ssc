@@ -1,0 +1,5 @@
+cstic IS_ITEM_OF_SV {
+	name "has service"
+	status released
+	classType SME_SERVICES
+}

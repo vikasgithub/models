@@ -1,0 +1,91 @@
+/* Actual CPU Speed */  /* not aggr*/
+characteristic ACTL_STD_SELF_CPU_SPD {
+	name "Actual STD_SELF CPU Speed"
+	numericLength 4 decimalPlaces 2
+	restrictable 
+	}
+characteristic ACTL_SCM_SELF_CPU_SPD {
+	name "Actual SCM_SELF CPU Speed"
+	numericLength 4 decimalPlaces 2
+restrictable }
+characteristic ACTL_PM_SELF_CPU_SPD {
+	name "Actual PM_SELF CPU Speed"
+	numericLength 4 decimalPlaces 2
+restrictable }
+characteristic ACTL_CRM_SALES_CPU_SPD {
+	name "Actual CRM_SALES CPU Speed"
+	numericLength 4 decimalPlaces 2	
+restrictable }
+characteristic ACTL_STD_SALES_CPU_SPD {
+	name "Actual STD_SALES CPU Speed"
+	numericLength 4 decimalPlaces 2
+restrictable }
+characteristic ACTL_SCM_SALES_CPU_SPD {
+	name "Actual SSM_SALES CPU Speed"
+	numericLength 4 decimalPlaces 2
+restrictable }
+
+/* Actual number of CPUs */
+characteristic ACTL_STD_SELF_CPU {
+	name "Actual STD_SELF CPUs"
+	numericLength 9 decimalPlaces 0 
+	specialFunction aggregating 
+}
+characteristic ACTL_SCM_SELF_CPU {
+	name "Actual SCM_SELF CPUs"
+	numericLength 9 decimalPlaces 0 
+	specialFunction aggregating 
+}
+characteristic ACTL_PM_SELF_CPU {
+	name "Actual PM_SELF CPUs"
+	numericLength 9 decimalPlaces 0 
+	specialFunction aggregating 
+}
+characteristic ACTL_CRM_SALES_CPU {
+	name "Actual CRM Sales CPUs"
+	numericLength 9 decimalPlaces 0 
+	specialFunction aggregating 
+}
+characteristic ACTL_STD_SALES_CPU {
+	name "Actual STD_Sales CPUs"
+	numericLength 9 decimalPlaces 0 
+	specialFunction aggregating 
+}
+characteristic ACTL_SCM_SALES_CPU {
+	name "Actual SCM_Sales CPUs"
+	numericLength 9 decimalPlaces 0 
+	specialFunction aggregating 
+}
+
+/* Actual Mem */
+characteristic ACTL_STD_SELF_MEM {
+	name "Actual STD_SELF Mem"
+	numericLength 9 decimalPlaces 0 
+	specialFunction aggregating 
+}
+characteristic ACTL_SCM_SELF_MEM {
+	name "Actual SCM_SELF Mem"
+	numericLength 9 decimalPlaces 0 
+	specialFunction aggregating 
+}
+characteristic ACTL_PM_SELF_MEM {
+	name "Actual PM_SELF Mem"
+	numericLength 9 decimalPlaces 0 
+	specialFunction aggregating 
+}
+characteristic ACTL_CRM_SALES_MEM {
+	name "Actual CRM Sales Mem"
+	numericLength 9 decimalPlaces 0 
+	specialFunction aggregating 
+}
+characteristic ACTL_STD_SALES_MEM {
+	name "Actual STD_Sales Mem"
+	numericLength 9 decimalPlaces 0 
+	specialFunction aggregating 
+}
+characteristic ACTL_SCM_SALES_MEM {
+	name "Actual SCM_Sales Mem"
+	numericLength 9 decimalPlaces 0 
+	specialFunction aggregating 
+}
+

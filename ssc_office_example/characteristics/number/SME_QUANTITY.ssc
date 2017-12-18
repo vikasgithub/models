@@ -1,0 +1,6 @@
+characteristic SME_QUANTITY {
+	name 'Quantity'
+	numericLength 10 decimalPlaces 0
+	intervals
+		>= 1
+}

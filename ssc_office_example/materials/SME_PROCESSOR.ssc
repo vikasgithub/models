@@ -1,0 +1,5 @@
+material SME_PROCESSOR {
+	classes
+		SME_PROCESSOR,
+		SME_CONTAINMENT
+}

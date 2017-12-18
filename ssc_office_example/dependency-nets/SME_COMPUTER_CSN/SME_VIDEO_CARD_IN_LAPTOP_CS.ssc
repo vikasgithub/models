@@ -1,0 +1,17 @@
+constraint SME_VIDEO_CARD_IN_LAPTOP_CS {
+	name 'SME_VIDEO_CARD_IN_LAPTOP_CS'
+	objects
+		?L is_object (material)(300)(nr=SME_LAPTOP)
+
+	condition
+		?L.SME_VIDEO_CARD_S <> 'IGP'
+
+	restrictions
+		has_part
+		(
+			?L,
+			pos_type = (material)(300)(nr=SME_VIDEO_CARD),
+			with
+				SME_VIDEO_CARD_S = ?L.SME_VIDEO_CARD_S
+		)
+}

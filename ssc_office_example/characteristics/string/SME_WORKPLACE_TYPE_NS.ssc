@@ -1,0 +1,7 @@
+characteristic SME_WORKPLACE_TYPE_NS {
+	name 'Type'
+	textLength 30
+	values 
+		'CAD'		name 'CAD',
+		'OFFICE'	name 'Office'
+}

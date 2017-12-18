@@ -1,0 +1,7 @@
+characteristic SME_NO_MONITORS_NF {
+	name 'Number of monitors'
+	numericLength 1 decimalPlaces 0
+	values
+		1,
+		2
+}

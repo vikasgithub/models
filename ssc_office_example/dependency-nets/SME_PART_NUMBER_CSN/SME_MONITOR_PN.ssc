@@ -1,0 +1,10 @@
+constraint SME_MONITOR_PN {
+	name 'SME_MONITOR_PN'
+	objects
+		?P is_a (300)SME_MONITOR
+
+	condition
+
+	restrictions
+		?P.SME_PART_NUMBER_S = 'MON1'
+}

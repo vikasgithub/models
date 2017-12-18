@@ -1,0 +1,15 @@
+constraint SME_CREATE_COMPUTER_CS {
+	name 'SME_CREATE_COMPUTER_CS'
+	objects
+		?W is_object (material)(300)(nr=SME_WORKPLACE)
+
+	condition
+		?W.SME_WORKPLACE_TYPE_NS specified
+
+	restrictions
+		has_part
+		(
+			?W,
+			pos_type=(300)SME_COMPUTER
+		)
+}

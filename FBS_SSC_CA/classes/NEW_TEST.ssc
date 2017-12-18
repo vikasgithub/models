@@ -1,0 +1,6 @@
+class NEW_TEST {
+	name "NEW_TEST"
+	characteristics
+		ACTL_CRM_SALES_CPU_SPD,
+		ACTL_SCM_SALES_CPU
+}

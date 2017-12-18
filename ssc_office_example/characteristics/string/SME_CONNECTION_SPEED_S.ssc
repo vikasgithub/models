@@ -1,0 +1,9 @@
+characteristic SME_CONNECTION_SPEED_S {
+	name "Connection speed"
+	textLength 30 restrictable
+	values
+		"CUSTOMER" name "Customer-specific" vcond 'NET_0',
+		"6" name "6Mbit/s" vcond 'NET_6',
+		"32" name "32Mbit/s" vcond 'NET_32',
+		"100" name "100Mbit/s" vcond 'NET_100'
+}

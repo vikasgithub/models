@@ -1,0 +1,13 @@
+constraint SME_SPECIALIZE_COMPUTER_CS {
+	name 'SME_SPECIALIZE_COMPUTER_CS'
+	objects
+		?C is_a (300)SME_COMPUTER
+
+	condition
+
+	restrictions
+		type_of(?C, (material)(300)(nr=SME_DESKTOP))
+			if ?C.SME_COMPUTER_TYPE_S in ['DESKTOP','WORKSTATION'],
+		type_of(?C, (material)(300)(nr=SME_LAPTOP))
+			if ?C.SME_COMPUTER_TYPE_S = 'LAPTOP'
+}

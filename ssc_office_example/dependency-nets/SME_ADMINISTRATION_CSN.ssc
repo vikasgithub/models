@@ -1,0 +1,6 @@
+constraintNet SME_ADMINISTRATION_CSN {
+	status released
+	constraints
+		SME_CREATE_ADMINISTRATION_CS,
+		SME_LINK_ADMINISTRATION_CS
+}

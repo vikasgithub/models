@@ -1,0 +1,61 @@
+/* STD_SELF */
+//rule AGGR_STD_SELF_CPU {
+//  objects: 
+//    ?S is_a (300) FBS_SSC_CA
+//     where ?SRV = STD_SELF_SERVERS_ADT
+//       
+//  body:  
+//    then increment:
+//     ?S.ACTL_STD_SELF_CPU by ?SRV.PROCESSOR_QTY      
+//}
+/* SCM_SELF */
+rule AGGR_SCM_SELF_CPU {
+  objects: 
+    ?S is_a (300) FBS_SSC_CA
+     where ?SRV = SCM_SELF_SERVERS_ADT
+       
+  body:  
+    then increment:
+     ?S.ACTL_SCM_SELF_CPU by ?SRV.PROCESSOR_QTY     
+}
+/* PM_SELF */
+rule AGGR_PM_SELF_CPU {
+  objects: 
+    ?S is_a (300) FBS_SSC_CA
+     where ?SRV = PM_SELF_SERVERS_ADT
+       
+  body:  
+    then increment:
+     ?S.ACTL_PM_SELF_CPU by ?SRV.PROCESSOR_QTY    
+}
+/* CRM_SALES */
+rule AGGR_CRM_SALES_CPU {
+  objects: 
+    ?S is_a (300) FBS_SSC_CA
+     where ?SRV = CRM_SALES_SERVERS_ADT
+       
+  body:  
+    then increment:
+     ?S.ACTL_CRM_SALES_CPU by ?SRV.PROCESSOR_QTY   
+}
+/* STD_SALES */
+rule AGGR_STD_SALES_CPU {
+  objects: 
+    ?S is_a (300) FBS_SSC_CA
+     where ?SRV = STD_SALES_SERVERS_ADT
+       
+  body:  
+    then increment:
+     ?S.ACTL_STD_SALES_CPU by ?SRV.PROCESSOR_QTY    
+}
+/* SCM_SALES */
+rule AGGR_SCM_SALES_CPU {
+  objects: 
+    ?S is_a (300) FBS_SSC_CA
+     where ?SRV = SCM_SALES_SERVERS_ADT
+       
+  body:  
+    then increment:
+     ?S.ACTL_SCM_SALES_CPU by ?SRV.PROCESSOR_QTY    
+  
+}

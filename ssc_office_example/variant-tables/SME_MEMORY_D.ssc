@@ -1,0 +1,8 @@
+variantTable SME_MEMORY_D {
+	name 'SME_MEMORY_D'
+	characteristics
+		SME_MEMORY_S primary,
+		SME_MEMORY_SIZE_F,
+		SME_MEMORY_SPEED_S
+	file 'SME_MEMORY_D.vtable'
+}

@@ -1,0 +1,5 @@
+bom SME_WORKPLACE {
+	10	class		SME_COMPUTER	min	0	max	9999,
+	20	material	SME_DESKTOP		min	0	max	9999,
+	30	material	SME_LAPTOP		min	0	max	9999
+}

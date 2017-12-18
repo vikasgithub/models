@@ -1,0 +1,5 @@
+characteristic SME_SYNCHRONIZE {
+	name "synchronize"
+	classType SME_ANY
+	multiValue
+}

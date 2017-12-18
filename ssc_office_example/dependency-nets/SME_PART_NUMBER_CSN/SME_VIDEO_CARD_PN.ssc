@@ -1,0 +1,17 @@
+constraint SME_VIDEO_CARD_PN {
+	name 'SME_VIDEO_CARD_PN'
+	objects
+		?P is_a (300)SME_VIDEO_CARD
+
+	condition
+
+	restrictions
+		table SME_VIDEO_CARD_PN
+		(
+			SME_VIDEO_CARD_S = ?P.SME_VIDEO_CARD_S,
+			SME_PART_NUMBER_S = ?P.SME_PART_NUMBER_S
+		)
+
+	inferences
+		?P.SME_PART_NUMBER_S
+}

@@ -1,0 +1,12 @@
+rule DFLT_EFFICIENCY_RATING {
+  objects:
+    ?SRV is_a (300)SERVER
+
+  body: then do:  
+    ?SRV.EFFICIENCY_RATING ?= 'EFFIC'
+    
+  explanations: 
+    "Default Efficiency Rating to middle value - Affordable Efficiency" 
+  } 
+ 
+      

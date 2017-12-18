@@ -1,0 +1,9 @@
+characteristic SME_COMPUTER_TYPE_S {
+	name 'Type'
+	textLength 30
+	restrictable
+	values 
+		'DESKTOP'		name 'Dektop PC',
+		'LAPTOP'		name 'Laptop',
+		'WORKSTATION'	name 'Workstation'
+}

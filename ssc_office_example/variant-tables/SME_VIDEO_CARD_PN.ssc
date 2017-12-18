@@ -1,0 +1,9 @@
+variantTable SME_VIDEO_CARD_PN {
+	name 'SME_VIDEO_CARD_PN'
+	characteristics
+		SME_VIDEO_CARD_S primary,
+		SME_PART_NUMBER_S
+	rows
+		"LOW_END", "VID1";
+		"HIGH_END", "VID2"
+}

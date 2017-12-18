@@ -1,0 +1,4 @@
+class SME_ADMINISTRATION extends SME_SERVICES {
+	name "Administration"
+	status released
+}

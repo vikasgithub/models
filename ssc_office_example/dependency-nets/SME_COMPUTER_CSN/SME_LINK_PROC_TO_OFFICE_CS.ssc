@@ -1,0 +1,11 @@
+constraint SME_LINK_PROC_TO_OFFICE_CS {
+	objects:
+		?O is_a (300)SME_OFFICE,
+		?P is_object (material)(300)(nr=SME_PROCESSOR)
+
+	condition:
+		?P.SME_IS_A <> 'PART'
+
+	restrictions:
+		?O.HAS_PART_SD_SOFT = ?P
+}

@@ -1,0 +1,9 @@
+characteristic SME_VIDEO_CARD_S {
+	name 'Video card'
+	textLength 30
+	restrictable
+	values
+		'IGP'		name 'IGP (no dedicated)',
+		'LOW_END'	name 'Low end',
+		'HIGH_END'	name 'High end'
+}

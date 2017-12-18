@@ -1,0 +1,7 @@
+material SME_LAPTOP {
+	name 'Laptop'
+	classes
+		SME_LAPTOP
+	boms
+		SME_LAPTOP
+}

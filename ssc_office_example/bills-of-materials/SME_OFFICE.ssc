@@ -1,0 +1,3 @@
+bom SME_OFFICE {
+	10	material	SME_WORKPLACE	min	0	max	9999
+}

@@ -1,0 +1,17 @@
+constraint SME_PROCESSOR_PN {
+	name 'SME_PROCESSOR_PN'
+	objects
+		?P is_a (300)SME_PROCESSOR
+
+	condition
+
+	restrictions
+		table SME_PROCESSOR_PN
+		(
+			SME_PROCESSOR_S = ?P.SME_PROCESSOR_S,
+			SME_PART_NUMBER_S = ?P.SME_PART_NUMBER_S
+		)
+
+	inferences
+		?P.SME_PART_NUMBER_S
+}

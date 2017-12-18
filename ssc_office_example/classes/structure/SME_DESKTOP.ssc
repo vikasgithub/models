@@ -1,0 +1,5 @@
+class SME_DESKTOP extends SME_COMPUTER {
+	name 'Desktop PC'
+	characteristics
+		SME_NO_MONITORS_NF required
+}

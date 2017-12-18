@@ -1,0 +1,4 @@
+constraintNet SME_INTERNET_CONN_CSN {
+	constraints
+		SME_LINK_INTERNET_CONN_CS
+}

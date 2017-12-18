@@ -1,0 +1,50 @@
+characteristic SDCOM_VKOND {
+	names
+		EN 'Variant condition',
+		DE 'Variantenkondition'
+	textLength 26
+	caseSensitive
+	multiValue
+	reference table 'SDCOM' field 'VKOND'
+}
+
+characteristic STPO_MENGE {
+	names
+		EN 'Component quantity',
+		DE 'Komponentenmenge'
+	numericLength 13 decimalPlaces 3
+	negativeValues
+	reference table 'STPO' field 'MENGE'
+}
+
+characteristic VBAP_NTGEW {
+	names
+		EN 'Net Weight of the Item',
+		DE 'Nettogewicht der Position'
+	numericLength 15 decimalPlaces 3
+	reference table 'VBAP' field 'NTGEW'
+}
+
+characteristic VBAP_VOLUM {
+	names
+		EN 'Volume of the itemnames',
+		DE 'Volumen der Position'
+	numericLength 15 decimalPlaces 3
+	reference table 'VBAP' field 'VOLUM'
+}
+
+characteristic VCSD_UPDATE_NTGEW {
+	names
+		EN 'Net Weight of the Item',
+		DE 'Nettogewicht der Position'
+	numericLength 15 decimalPlaces 3
+	reference table 'VCSD_UPDATE' field 'NTGEW'
+}
+
+characteristic VCSD_UPDATE_VOLUM {
+	names
+		EN 'Volume of the itemnames',
+		DE 'Volumen der Position'
+	numericLength 15 decimalPlaces 3
+	reference table 'VCSD_UPDATE' field 'VOLUM'
+}

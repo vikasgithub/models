@@ -1,0 +1,6 @@
+class SME_PROCESSOR extends SME_PART {
+	name 'Processor'
+	characteristics
+		SME_PROCESSOR_S required,
+		SME_PART_NUMBER_S required
+}

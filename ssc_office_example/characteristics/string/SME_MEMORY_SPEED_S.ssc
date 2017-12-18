@@ -1,0 +1,9 @@
+characteristic SME_MEMORY_SPEED_S {
+	name 'Memory'
+	textLength 30
+	restrictable
+	values 
+		"1333" name '1333MHz',
+		"1600" name '1600MHz',
+		"2000" name '2000MHz'
+}

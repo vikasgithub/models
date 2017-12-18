@@ -1,0 +1,4 @@
+characteristic IS_PART_OF_SD_HARD {
+	name 'is part of (hard)'
+	classType SME_CONTAINMENT
+}

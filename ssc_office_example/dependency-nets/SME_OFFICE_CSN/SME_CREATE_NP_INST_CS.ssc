@@ -1,0 +1,27 @@
+constraint SME_CREATE_NP_INST_CS {
+	status released
+	objects
+		?O is_a (300)SME_OFFICE
+
+	restrictions
+		find_or_create
+		(
+			(300)SME_NP_INST_1
+		) if ?O.SME_CREATE_NP_INST = 'SME_NP_INST_1',
+		find_or_create
+		(
+			(300)SME_NP_INST_2
+		) if ?O.SME_CREATE_NP_INST = 'SME_NP_INST_2',
+		find_or_create
+		(
+			(300)SME_NP_INST_3
+		) if ?O.SME_CREATE_NP_INST = 'SME_NP_INST_3',
+		find_or_create
+		(
+			(300)SME_NP_INST_4
+		) if ?O.SME_CREATE_NP_INST = 'SME_NP_INST_4',
+		find_or_create
+		(
+			(300)SME_NP_INST_5
+		) if ?O.SME_CREATE_NP_INST = 'SME_NP_INST_5'
+}

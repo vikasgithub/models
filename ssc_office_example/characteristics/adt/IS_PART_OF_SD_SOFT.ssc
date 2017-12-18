@@ -1,0 +1,4 @@
+characteristic IS_PART_OF_SD_SOFT {
+	name 'is part of (soft)'
+	classType SME_CONTAINMENT
+}

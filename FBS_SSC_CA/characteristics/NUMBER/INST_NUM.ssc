@@ -1,0 +1,10 @@
+characteristic INST_NUM {
+  name "Instance number"
+  numericLength 9 decimalPlaces 0
+  
+ }
+ characteristic MAX_INST_NUM {
+  name "Instance number"
+  numericLength 9 decimalPlaces 0
+  
+ }

@@ -1,0 +1,16 @@
+The classical models have all materials associated to the same blade class - HT3_BLADE_1.
+and it has 4 memory kits, each with domain of 2,4,8,16 GB - giving each blade 16*4=64GB max memory
+thi sis contrary to the Vtable data, for example 'BL460CG7' having min 6 GB and Max 600 GB of RAM.
+
+So i will make this simplifying assumption -
+the BL460CG7 is a blade server - containing n blades (HT3_BLADE_1).  
+to get min memory (6GB) - n=1 with 3 mem kits of 2 gb each 
+to get max memory (600) - n=10; 9 with 4 kits of 16 (9*64=576), and 1 with 3 kits of 8 (24).
+So i will leave my classes intact, but instead of specializing to the classical material (HT3_), 
+specialize to my Adv Mode Material (SOL_) with a Bom, position 10 is the classical Material)
+the calssical materials will have the cstics of BLade_1
+I will set values ad instantiate as many as are needed.
+
+Discuss with Eberhard Schick, and with Steve.
+because even when done with this, it doesnt seem right that wewould need 10+ distinct materials and KB's 
+when they are all identical.

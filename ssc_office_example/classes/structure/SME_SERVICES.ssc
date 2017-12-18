@@ -1,0 +1,7 @@
+class SME_SERVICES extends SME_ANY {
+	name "Services"
+	status released
+	characteristics
+		HAS_ITEM_SV invisible,
+		SME_SURCHARGE 
+}

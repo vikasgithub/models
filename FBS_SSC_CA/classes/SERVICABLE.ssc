@@ -1,0 +1,59 @@
+class SERVICABLE extends HSS_ANY  { 
+  name"Service-able items"
+  characteristics
+  		IS_ITEM_OF_SV 
+  		,AUTO_ASSIGN invisible noinput defaultValues(3)
+  		,AUTO_ASSIGN_TXT defaultValues('3')
+}
+
+characteristic AUTO_ASSIGN {
+  name "AUTO ASSIGN"
+  numericLength 1 
+  specialFunction default
+  values 0,1,2,3
+}
+characteristic AUTO_ASSIGN_TXT {
+  name "AUTO ASSIGN"
+  textLength 1 
+  restrictable
+  values "0" name "None"
+        ,"1" name "Software"
+        ,"2" name "Services"
+        ,"3" name "All"
+}
+/*constraint AUTO_ASSIGN_OVERRIDE {
+  objects:
+    ?S is_a (300)SERVICABLE
+  condition:
+    ?S.AUTO_ASSIGN_TXT specified
+  restrictions:
+    ?S.AUTO_ASSIGN = 0 
+    if ?S.AUTO_ASSIGN_TXT = "0" 
+    //if ?S.AUTO_ASSIGN_TXT = "0" 
+    
+  //  ,?S.AUTO_ASSIGN = 1 if ?S.AUTO_ASSIGN_TXT = "1"
+  //  ,?S.AUTO_ASSIGN = 2 if ?S.AUTO_ASSIGN_TXT = "2"
+  //  ,?S.AUTO_ASSIGN = 3 if ?S.AUTO_ASSIGN_TXT = "3"
+    
+  inferences:
+    ?S.AUTO_ASSIGN
+  explanations: 
+    "set the numeric autoassign (which has a sticky default) based on users text selection"
+} */
+
+/*constraint AUTO_ASSIGN_DEFAULT {
+  objects:
+    ?S is_a (300)SERVICABLE
+
+  restrictions:
+    ?S.AUTO_ASSIGN_TXT = "0" if ?S.AUTO_ASSIGN = "0" 
+    
+  //  ,?S.AUTO_ASSIGN = 1 if ?S.AUTO_ASSIGN_TXT = "1"
+  //  ,?S.AUTO_ASSIGN = 2 if ?S.AUTO_ASSIGN_TXT = "2"
+  //  ,?S.AUTO_ASSIGN = 3 if ?S.AUTO_ASSIGN_TXT = "3"
+    
+  inferences:
+    ?S.AUTO_ASSIGN_TXT
+  explanations: 
+    "set the text autoassign based on the numeric which has a sticky default"
+}*/

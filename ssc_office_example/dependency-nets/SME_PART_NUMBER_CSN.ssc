@@ -1,0 +1,8 @@
+constraintNet SME_PART_NUMBER_CSN {
+	name 'SME_PART_NUMBER_CSN'
+	constraints
+		SME_PROCESSOR_PN,
+		SME_MEMORY_PN,
+		SME_VIDEO_CARD_PN,
+		SME_MONITOR_PN
+}

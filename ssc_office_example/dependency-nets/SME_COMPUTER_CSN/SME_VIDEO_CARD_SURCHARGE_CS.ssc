@@ -1,0 +1,10 @@
+constraint SME_VIDEO_CARD_SURCHARGE_CS {
+	objects:
+		?C is_a (300)SME_COMPUTER
+
+	restrictions:
+		?C.SME_SURCHARGE = 'LOW_END_CARD'
+			if ?C.SME_VIDEO_CARD_S = 'LOW_END',
+		?C.SME_SURCHARGE = 'HIGH_END_CARD'
+			if ?C.SME_VIDEO_CARD_S = 'HIGH_END'
+}

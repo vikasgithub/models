@@ -1,0 +1,4 @@
+class SME_NP_INST_5 extends SME_CONTAINMENT {
+	name "non-part instance 5"
+	status released
+}

@@ -1,0 +1,6 @@
+bom SME_DESKTOP {
+	10	material	SME_PROCESSOR	min	0	max	1,
+	20	material	SME_MEMORY		min	0	max	4,
+	30	material	SME_VIDEO_CARD	min	0	max	1,
+	40	material	SME_MONITOR		min	0	max	2
+}

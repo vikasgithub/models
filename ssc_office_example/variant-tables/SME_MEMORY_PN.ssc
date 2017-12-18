@@ -1,0 +1,10 @@
+variantTable SME_MEMORY_PN {
+	name 'SME_MEMORY_PN'
+	characteristics
+		SME_MEMORY_SPEED_S primary,
+		SME_PART_NUMBER_S
+	rows
+		"1333", "MEM1";
+		"1600", "MEM2";
+		"2000", "MEM3"
+}

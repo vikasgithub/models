@@ -1,0 +1,19 @@
+constraint CREATE_BLADE_1 {
+  objects:
+    ?SRV is_a (300)SERVER
+
+  condition:
+    ?SRV.NUM_BLADES specified
+    and (?SRV.INST_NUM < ?SRV.MAX_INST_NUM  or
+         ?SRV.INST_NUM = ?SRV.MAX_INST_NUM) 
+  restrictions:
+     find_or_create (
+       (300) HT3_BLADE_1,
+       with INST_NUM = 1;
+            BLADE_NAME = ?SRV.SERVER_NAME;
+            IN_SERVER  = ?SRV;
+            IS_PART_OF_SD_HARD = ?SRV)    
+
+  explanations: 
+    "Explanation/documentation of the constraint."
+}

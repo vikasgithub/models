@@ -1,0 +1,8 @@
+class SME_OFFICE extends SME_CONTAINMENT {
+	name 'Office'
+	characteristics
+		SME_DATE,
+		SME_NO_WORKPLACES_NF required,
+		SME_CREATE_NP_INST,
+		SME_SURCHARGE
+}

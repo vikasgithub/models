@@ -1,0 +1,13 @@
+constraint SME_LINK_ADMINISTRATION_CS {
+	status released
+	objects
+		?C is_a (300)SME_COMPUTER,
+		?A is_a (300)SME_ADMINISTRATION
+
+	restrictions
+		?A.HAS_ITEM_SV = ?C,
+//TODO works if compiled by ECC but crashes if compiled by PME 
+		// ?A.HAS_ITEM_SV.IS_ITEM_OF_SV = ?A
+//Workaround:
+		?C.IS_ITEM_OF_SV = ?A
+}

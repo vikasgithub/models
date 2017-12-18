@@ -1,0 +1,13 @@
+constraint BLADE_VKOND {
+  objects:
+    ?blade is_a (300)HT3_BLADE_1
+    
+  restrictions:
+    ?blade.RC_SDCOM_VKOND = 'MK1_' || ?blade.HT3_MEM_KIT_1 
+    ,?blade.RC_SDCOM_VKOND = 'MK2_' || ?blade.HT3_MEM_KIT_2 
+    ,?blade.RC_SDCOM_VKOND = 'MK3_' || ?blade.HT3_MEM_KIT_3 
+    ,?blade.RC_SDCOM_VKOND = 'MK4_' || ?blade.HT3_MEM_KIT_4 
+  inferences:
+    ?blade.RC_SDCOM_VKOND
+  
+}

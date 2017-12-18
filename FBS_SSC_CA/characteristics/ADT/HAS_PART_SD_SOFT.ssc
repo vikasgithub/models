@@ -1,0 +1,5 @@
+characteristic HAS_PART_SD_SOFT {
+	name 'has part (soft)'
+	classType HSS_ANY
+	multiValue
+}

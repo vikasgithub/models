@@ -1,0 +1,23 @@
+constraint SME_MONITOR_IN_DESKTOP_CS {
+	name 'SME_MONITOR_IN_DESKTOP_CS'
+	objects
+		?D is_object (material)(300)(nr=SME_DESKTOP)
+
+	condition
+
+	restrictions
+		has_part
+		(
+			?D,
+			pos_type = (material)(300)(nr=SME_MONITOR),
+			with
+				SME_INSTANCE_NF = 0
+		) if ?D.SME_NO_MONITORS_NF > 0,
+		has_part
+		(
+			?D,
+			pos_type = (material)(300)(nr=SME_MONITOR),
+			with
+				SME_INSTANCE_NF = 1
+		) if ?D.SME_NO_MONITORS_NF > 1
+}

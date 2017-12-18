@@ -1,0 +1,13 @@
+characteristic SME_PROCESSOR_S {
+	name 'Processor'
+	textLength 30
+	restrictable
+	values 
+		'DUAL_2_4' name '2 x 2.4GHz',
+		'DUAL_2_8' name '2 x 2.8GHz',
+		'DUAL_3_0' name '2 x 3.0GHz',
+		'DUAL_3_6' name '2 x 3.6GHz',
+		'QUAD_2_8' name '4 x 2.8GHz',
+		'QUAD_3_1' name '4 x 3.1GHz',
+		'QUAD_3_4' name '4 x 3.4GHz'
+}

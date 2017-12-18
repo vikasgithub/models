@@ -1,0 +1,10 @@
+constraint SME_LINK_WORKPLACES_CS {
+	name 'SME_LINK_WORKPLACES_CS'
+	objects
+		?O is_a (300)SME_OFFICE,
+		?W is_a (300)SME_WORKPLACE
+
+	restrictions
+		?O.HAS_PART_SD_SOFT = ?W,
+		?W.IS_PART_OF_SD_SOFT = ?O
+}

@@ -1,0 +1,13 @@
+constraint SME_DYN_INVISIBLE_CS {
+	objects
+		?W is_a (300)SME_WORKPLACE
+
+	condition
+		?W.SME_DYN_INVISIBLE_NS = 'YES'
+
+	restrictions
+		?W.invisible SME_WORKPLACE_TYPE_NS
+
+	inferences
+		?W.invisible SME_WORKPLACE_TYPE_NS
+}

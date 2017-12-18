@@ -1,0 +1,26 @@
+constraint DEMAND_SCM_SELF {
+  objects:
+    ?S is_a (300) FBS_SSC_CA
+    where ?MD = HAS_USER_MASTER_DATA
+ 
+  condition:
+    ?MD.USER_TYPE = 'SCM_SELF'
+    
+  restrictions:
+  /* SCM SELFSERV */   
+    ?S.REQ_SCM_SELF_CPU_SPD =
+    ?MD.MIN_CPU_SPD,
+        
+    ?S.REQ_SCM_SELF_CPU =
+    ?S.SCM_SELFSERV_USERS / ?MD.USERS_PER_CPU ,
+       
+    ?S.REQ_SCM_SELF_MEM =
+    ?MD.MEM_PER_USER * ?S.SCM_SELFSERV_USERS 
+      
+  inferences:
+     ?S.REQ_SCM_SELF_CPU_SPD
+    ,?S.REQ_SCM_SELF_CPU
+    ,?S.REQ_SCM_SELF_MEM
+  explanations: 
+    "calc the demand based on user input."
+}

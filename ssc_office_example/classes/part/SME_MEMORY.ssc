@@ -1,0 +1,7 @@
+class SME_MEMORY extends SME_PART {
+	name "Memory"
+	characteristics
+		SME_INSTANCE_NF invisible,
+		SME_MEMORY_SPEED_S required,
+		SME_PART_NUMBER_S required
+}

@@ -1,0 +1,11 @@
+constraint SME_LINK_MEM_TO_COMPUTER_CS {
+	objects:
+		?C is_a (300)SME_COMPUTER,
+		?M is_object (material)(300)(nr=SME_MEMORY)
+
+	condition:
+		part_of(?M,?C)
+
+	restrictions:
+		?C.HAS_PART_SD_HARD = ?M
+}

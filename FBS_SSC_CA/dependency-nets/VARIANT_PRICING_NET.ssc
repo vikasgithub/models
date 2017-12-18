@@ -1,0 +1,4 @@
+constraintNet VARIANT_PRICING_NET {
+  constraints
+    BLADE_VKOND
+}

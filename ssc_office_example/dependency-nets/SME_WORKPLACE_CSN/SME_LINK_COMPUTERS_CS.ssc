@@ -1,0 +1,13 @@
+constraint SME_LINK_COMPUTERS_CS {
+	name 'SME_LINK_COMPUTERS_CS'
+	objects
+		?W is_a (300)SME_WORKPLACE,
+		?C is_a (300)SME_COMPUTER
+
+	condition
+		part_of(?C, ?W)
+
+	restrictions
+		?W.HAS_PART_SD_HARD = ?C,
+		?C.IS_PART_OF_SD_HARD = ?W
+}

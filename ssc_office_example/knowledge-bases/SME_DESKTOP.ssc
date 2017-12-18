@@ -1,0 +1,7 @@
+knowledgeBase SME_DESKTOP {
+	version "0.0.0.1"
+	tasks
+		SME_DESKTOP_TSK
+	profiles
+		name 'SME_DESKTOP' material SME_DESKTOP
+}

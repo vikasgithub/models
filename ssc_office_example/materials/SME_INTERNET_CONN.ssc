@@ -1,0 +1,5 @@
+material SME_INTERNET_CONN {
+	name "Internet connection"
+	classes
+		SME_INTERNET_CONN
+}

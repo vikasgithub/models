@@ -1,0 +1,5 @@
+material SME_VIDEO_CARD {
+	classes
+		SME_VIDEO_CARD,
+		SME_CONTAINMENT
+}

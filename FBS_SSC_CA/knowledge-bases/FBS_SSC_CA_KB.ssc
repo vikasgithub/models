@@ -1,0 +1,23 @@
+knowledgeBase FBS_SSC_CA_KB {
+  version "0.0.4.0"
+  validFrom 2017-03-01
+  tasks
+    SOLUTION_TASK_1   
+  profiles
+    name 'FBS_SSC_CA_M_PRF' material FBS_SSC_CA 
+
+}
+task SOLUTION_TASK_1  {
+  constraintNets 
+    SOLUTION_NET
+   ,MASTER_DATA_NET 
+   ,HARDWARE_NET   
+   ,SOFTWARE_NET 
+   ,SERVICE_NET 
+   ,VARIANT_PRICING_NET
+  ruleNets 
+    HARDWARE_RLN 
+   ,SOFTWARE_RLN  
+   ,SERVICE_RLN 
+//   ,SOLUTION_RLN 
+}

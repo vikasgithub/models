@@ -1,0 +1,5 @@
+class SME_PART extends SME_ANY {
+	name 'Part'
+	characteristics
+		SME_IS_A invisible defaultValues ("NON_PART")
+}

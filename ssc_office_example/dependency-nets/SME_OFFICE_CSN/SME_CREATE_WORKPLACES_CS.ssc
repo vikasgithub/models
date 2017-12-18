@@ -1,0 +1,23 @@
+constraint SME_CREATE_WORKPLACES_CS {
+	name 'SME_CREATE_WORKPLACES_CS'
+	objects
+		?O is_object (material)(300)(nr=SME_OFFICE),
+		?W is_a (300)SME_WORKPLACE
+
+	condition
+
+	restrictions
+		has_part
+		(
+			?O,
+			pos_type=(material)(300)(nr=SME_WORKPLACE),
+			with SME_INSTANCE_NF = 1
+		) if ?O.SME_NO_WORKPLACES_NF > 0,
+		has_part
+		(
+			?O,
+			pos_type=(material)(300)(nr=SME_WORKPLACE),
+			with SME_INSTANCE_NF = ?W.SME_INSTANCE_NF + 1
+		) if ?O.SME_NO_WORKPLACES_NF > 1
+		and ?W.SME_INSTANCE_NF < ?O.SME_NO_WORKPLACES_NF
+}

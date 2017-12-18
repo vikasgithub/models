@@ -1,0 +1,7 @@
+task SME_DESKTOP_TSK {
+	status released
+	constraintNets
+		SME_COMPUTER_CSN,
+		SME_DESKTOP_CSN,
+		SME_PART_NUMBER_CSN
+}

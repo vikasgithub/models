@@ -1,0 +1,68 @@
+constraint VISIBLE_INST {
+  objects:
+    ?S is_object (material)(300)(nr=FBS_SSC_CA)
+
+  restrictions:
+ //set visibility of server name based on specd indicators      
+     ?S.invisible STD_SELF_SERVER_NAME
+        if ?S.STD_SELFSERV_USERS_SPECD <> 'YES',
+        
+     ?S.invisible SCM_SELF_SERVER_NAME
+        if ?S.SCM_SELFSERV_USERS_SPECD <> 'YES',
+                       
+     ?S.invisible PM_SELF_SERVER_NAME
+        if ?S.PM_SELFSERV_USERS_SPECD  <> 'YES',
+        
+     ?S.invisible CRM_SALES_SERVER_NAME
+        if ?S.CRM_SALES_USERS_SPECD    <> 'YES',
+                
+     ?S.invisible STD_SALES_SERVER_NAME
+        if ?S.STD_SALES_USERS_SPECD    <> 'YES',
+        
+     ?S.invisible SCM_SALES_SERVER_NAME
+        if ?S.SCM_SALES_USERS_SPECD    <> 'YES',
+       
+ //set visibility of instance selecting based on specd indicators      
+     ?S.invisible STD_SELF_INST_SELECT
+        if ?S.STD_SELF_SERVER_SPECD    <> 'YES'
+        or ?S.STD_SELFSERV_USERS_SPECD <> 'YES',
+        
+     ?S.invisible SCM_SELF_INST_SELECT
+        if ?S.SCM_SELF_SERVER_SPECD    <> 'YES'
+        or ?S.SCM_SELFSERV_USERS_SPECD <> 'YES',
+                       
+     ?S.invisible PM_SELF_INST_SELECT
+        if ?S.PM_SELF_SERVER_SPECD     <> 'YES'
+        or ?S.PM_SELFSERV_USERS_SPECD  <> 'YES',
+        
+     ?S.invisible CRM_SALES_INST_SELECT
+        if ?S.CRM_SALES_SERVER_SPECD   <> 'YES'
+        or ?S.CRM_SALES_USERS_SPECD    <> 'YES',
+                
+     ?S.invisible STD_SALES_INST_SELECT
+        if ?S.STD_SALES_SERVER_SPECD   <> 'YES'
+        or ?S.STD_SALES_USERS_SPECD    <> 'YES',
+        
+     ?S.invisible SCM_SALES_INST_SELECT
+        if ?S.SCM_SALES_SERVER_SPECD   <> 'YES'
+        or ?S.SCM_SALES_USERS_SPECD    <> 'YES'
+ 
+ inferences:
+      ?S.invisible STD_SELF_INST_SELECT        
+     ,?S.invisible SCM_SELF_INST_SELECT
+     ,?S.invisible PM_SELF_INST_SELECT       
+     ,?S.invisible CRM_SALES_INST_SELECT
+     ,?S.invisible STD_SALES_INST_SELECT
+     ,?S.invisible SCM_SALES_INST_SELECT
+
+     ,?S.invisible STD_SELF_SERVER_NAME 
+     ,?S.invisible SCM_SELF_SERVER_NAME 
+     ,?S.invisible PM_SELF_SERVER_NAME     
+     ,?S.invisible CRM_SALES_SERVER_NAME    
+     ,?S.invisible STD_SALES_SERVER_NAME    
+     ,?S.invisible SCM_SALES_SERVER_NAME
+          
+  explanations: 
+    "Hide Server Names til user num specd,
+    Hide Inst nums til server name and user num picked."
+}

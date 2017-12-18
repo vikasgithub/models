@@ -1,0 +1,5 @@
+class MCI_ROOT_CLASS extends SME_ANY {
+	name "MCI"
+	characteristics
+		SME_SYNCHRONIZE
+}

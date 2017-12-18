@@ -1,0 +1,6 @@
+class MYTEST {
+	name "MYTEST"
+	characteristics
+		ACTL_CRM_SALES_CPU,
+		ACTL_PM_SELF_MEM
+}

@@ -1,0 +1,8 @@
+constraint SME_MONITOR_SURCHARGE_CS {
+	objects:
+		?D is_a (300)SME_DESKTOP
+
+	restrictions:
+		?D.SME_SURCHARGE = '1_MONITOR' if ?D.SME_NO_MONITORS_NF = 1,
+		?D.SME_SURCHARGE = '2_MONITORS' if ?D.SME_NO_MONITORS_NF = 2
+}

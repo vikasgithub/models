@@ -1,0 +1,5 @@
+class SME_INTERNET_CONN extends SME_SERVICES {
+	name "Internet connection"
+	characteristics
+		SME_CONNECTION_SPEED_S required
+}

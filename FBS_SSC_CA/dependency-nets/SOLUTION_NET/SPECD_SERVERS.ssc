@@ -1,0 +1,47 @@
+constraint SPECD_SERVERS {
+  objects:
+    ?S is_object (material)(300)(nr=FBS_SSC_CA)
+  condition:
+  // Server names per user type     
+     ?S.STD_SELF_SERVER_NAME specified
+     or ?S.SCM_SELF_SERVER_NAME specified
+     or ?S.PM_SELF_SERVER_NAME specified
+     
+     or ?S.CRM_SALES_SERVER_NAME specified
+     or ?S.STD_SALES_SERVER_NAME specified
+     or ?S.SCM_SALES_SERVER_NAME specified
+     
+  restrictions:
+// set specd? indicators
+
+     ?S.STD_SELF_SERVER_SPECD ='YES'
+       if ?S.STD_SELF_SERVER_NAME specified,
+       
+     ?S.SCM_SELF_SERVER_SPECD ='YES'
+       if ?S.SCM_SELF_SERVER_NAME specified,
+
+     ?S.PM_SELF_SERVER_SPECD ='YES'
+       if ?S.PM_SELF_SERVER_NAME specified, 
+
+     ?S.CRM_SALES_SERVER_SPECD ='YES'
+       if ?S.CRM_SALES_SERVER_NAME specified,
+
+     ?S.STD_SALES_SERVER_SPECD ='YES'
+       if ?S.STD_SALES_SERVER_NAME specified, 
+
+     ?S.SCM_SALES_SERVER_SPECD ='YES'
+       if ?S.SCM_SALES_SERVER_NAME specified       
+       
+  
+ inferences:
+     ?S.STD_SELF_SERVER_SPECD
+     ,?S.SCM_SELF_SERVER_SPECD
+     ,?S.PM_SELF_SERVER_SPECD
+     ,?S.CRM_SALES_SERVER_SPECD
+     ,?S.STD_SALES_SERVER_SPECD
+     ,?S.SCM_SALES_SERVER_SPECD
+     
+  explanations: 
+    "Hide Server Names til user num specd,
+    Hide Inst nums til server name and user num picked."
+}

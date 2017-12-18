@@ -1,0 +1,6 @@
+cstic HAS_ITEM_SV {
+	name "serves"
+	status released
+	classType SME_CONTAINMENT
+	multiValue
+}

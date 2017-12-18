@@ -1,0 +1,74 @@
+constraint CPU_SPD_DOMAIN {
+  objects:
+    ?S is_a (300) FBS_SSC_CA
+
+  restrictions:
+/*    ?S.domain ACTL_ALL_CPU_SPD  >= ?S.REQ_STD_SELF_CPU_SPD
+   ,?S.domain ACTL_ALL_CPU_SPD  >= ?S.REQ_SCM_SELF_CPU_SPD
+   ,?S.domain ACTL_ALL_CPU_SPD   >= ?S.REQ_PM_SELF_CPU_SPD
+   ,?S.domain ACTL_ALL_CPU_SPD >= ?S.REQ_CRM_SALES_CPU_SPD
+   ,?S.domain ACTL_ALL_CPU_SPD >= ?S.REQ_STD_SALES_CPU_SPD
+   ,?S.domain ACTL_ALL_CPU_SPD >= ?S.REQ_SCM_SALES_CPU_SPD
+ */
+    ?S.domain ACTL_STD_SELF_CPU_SPD  >= ?S.REQ_STD_SELF_CPU_SPD
+   ,?S.domain ACTL_SCM_SELF_CPU_SPD  >= ?S.REQ_SCM_SELF_CPU_SPD
+   ,?S.domain ACTL_PM_SELF_CPU_SPD   >= ?S.REQ_PM_SELF_CPU_SPD
+   ,?S.domain ACTL_CRM_SALES_CPU_SPD >= ?S.REQ_CRM_SALES_CPU_SPD
+   ,?S.domain ACTL_STD_SALES_CPU_SPD >= ?S.REQ_STD_SALES_CPU_SPD
+   ,?S.domain ACTL_SCM_SALES_CPU_SPD >= ?S.REQ_SCM_SALES_CPU_SPD
+       
+   ,  
+   /* STD SELF */   
+    table T_SERVER_DATA
+       (SERVER_NAME  = ?S.domain STD_SELF_SERVER_NAME
+       ,PROCESSOR_SPD = ?S.domain ACTL_STD_SELF_CPU_SPD
+       ),
+
+/* SCM SELF */  
+    table T_SERVER_DATA
+       (SERVER_NAME  = ?S.domain SCM_SELF_SERVER_NAME                          
+       ,PROCESSOR_SPD = ?S.domain ACTL_SCM_SELF_CPU_SPD
+       ),
+
+/* PM SELF */           
+    table T_SERVER_DATA
+       (SERVER_NAME  = ?S.domain PM_SELF_SERVER_NAME
+       ,PROCESSOR_SPD = ?S.domain ACTL_PM_SELF_CPU_SPD
+       ),
+       
+/* CRM SALES */                    
+    table T_SERVER_DATA
+       (SERVER_NAME  = ?S.domain CRM_SALES_SERVER_NAME
+       ,PROCESSOR_SPD = ?S.domain ACTL_CRM_SALES_CPU_SPD
+       ),
+
+/* STD SALES */                            
+    table T_SERVER_DATA
+       (SERVER_NAME  = ?S.domain STD_SALES_SERVER_NAME
+       ,PROCESSOR_SPD = ?S.domain ACTL_STD_SALES_CPU_SPD
+       ),
+
+/* SCM SALES */                             
+    table T_SERVER_DATA
+       (SERVER_NAME  = ?S.domain SCM_SALES_SERVER_NAME
+       ,PROCESSOR_SPD = ?S.domain ACTL_SCM_SALES_CPU_SPD
+       )   
+       
+     
+  inferences:
+    ?S.domain ACTL_STD_SELF_CPU_SPD  
+   ,?S.domain ACTL_SCM_SELF_CPU_SPD  
+   ,?S.domain ACTL_PM_SELF_CPU_SPD  
+   ,?S.domain ACTL_CRM_SALES_CPU_SPD 
+   ,?S.domain ACTL_STD_SALES_CPU_SPD 
+   ,?S.domain ACTL_SCM_SALES_CPU_SPD 
+     ,?S.domain STD_SELF_SERVER_NAME
+    ,?S.domain SCM_SELF_SERVER_NAME
+    ,?S.domain PM_SELF_SERVER_NAME
+    ,?S.domain CRM_SALES_SERVER_NAME
+    ,?S.domain STD_SALES_SERVER_NAME
+    ,?S.domain SCM_SALES_SERVER_NAME
+     
+  explanations: 
+    "set domain of Suitable CPU Speads based on REQ speed for user types"
+}

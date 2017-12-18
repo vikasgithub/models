@@ -1,0 +1,17 @@
+constraint SME_VIDEO_CARD_IN_DESKTOP_CS {
+	name 'SME_VIDEO_CARD_IN_DESKTOP_CS'
+	objects
+		?D is_object (material)(300)(nr=SME_DESKTOP)
+
+	condition
+		?D.SME_VIDEO_CARD_S <> 'IGP'
+
+	restrictions
+		has_part
+		(
+			?D,
+			pos_type = (material)(300)(nr=SME_VIDEO_CARD),
+			with
+				SME_VIDEO_CARD_S = ?D.SME_VIDEO_CARD_S
+		)
+}

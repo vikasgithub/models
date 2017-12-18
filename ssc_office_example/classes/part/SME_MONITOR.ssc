@@ -1,0 +1,6 @@
+class SME_MONITOR extends SME_PART {
+	name 'Monitor'
+	characteristics
+		SME_INSTANCE_NF invisible,
+		SME_PART_NUMBER_S required
+}

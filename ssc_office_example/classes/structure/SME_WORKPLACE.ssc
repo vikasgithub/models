@@ -1,0 +1,11 @@
+class SME_WORKPLACE extends SME_CONTAINMENT {
+	name 'Workplace'
+	characteristics
+		SME_INSTANCE_NF invisible,
+		SME_QUANTITY defaultValues (1),
+		SME_COMPONENT_QUANTITY noinput invisible,
+		SME_WORKPLACE_TYPE_NS required,
+		SME_DYN_NO_INPUT_NS,
+		SME_DYN_INVISIBLE_NS,
+		SME_SURCHARGE
+}

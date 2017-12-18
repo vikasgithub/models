@@ -1,0 +1,8 @@
+constraint SME_REFERENCE_CLASSES_CS {
+	name "SME_REFERENCE_CLASSES_CS"
+	objects
+		?M is_a (300)MCI_ROOT_CLASS
+
+	restrictions
+		?M.invisible SME_SYNCHRONIZE
+}

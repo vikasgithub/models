@@ -1,0 +1,4 @@
+class VARIANT_PRICABLE {
+	characteristics
+	  RC_SDCOM_VKOND invisible
+}

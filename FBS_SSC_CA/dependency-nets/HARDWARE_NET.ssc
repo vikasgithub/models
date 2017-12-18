@@ -1,0 +1,45 @@
+constraintNet HARDWARE_NET  {
+	constraints
+        CREATE_BLADE_1
+       ,CREATE_BLADE_N
+       //,SERVER_INST
+       ,SERVER_INST_1
+    //ALL_INST_BY_CNT
+       ,STD_SELF_INST_N
+       ,SCM_SELF_INST_N
+       ,PM_SELF_INST_N
+       ,CRM_SALES_INST_N
+       ,STD_SALES_INST_N
+       ,SCM_SALES_INST_N
+       
+       ,SET_SERVER
+       ,SERVER_MATL
+    //SET_MAX_INST_NUM
+       ,SET_MAX_INST_STD_SELF
+       ,SET_MAX_INST_SCM_SELF
+       ,SET_MAX_INST_PM_SELF
+       ,SET_MAX_INST_CRM_SALES
+       ,SET_MAX_INST_STD_SALES
+       ,SET_MAX_INST_SCM_SALES
+       ,BLADE_MAT  
+       ,SET_MEM_PER_BLADE
+       ,SET_NUM_BLADES
+    //SET_BLADE_MEM_KITS
+       ,SET_BLADE_MEM_KIT_1
+       ,SET_BLADE_MEM_KIT_2
+       ,SET_BLADE_MEM_KIT_3
+       ,SET_BLADE_MEM_KIT_4
+    //LINK_HW-SW, -SV
+       ,LINK_HW_SW
+       ,LINK_HW_SV
+       ,LINK_BLADE_SRV
+    //LINK_SERVER
+       ,LINK_CRM_SALES_SERVER 
+       ,LINK_PM_SELF_SERVER
+  	   ,LINK_SCM_SALES_SERVER
+       ,LINK_SCM_SELF_SERVER
+	   ,LINK_STD_SALES_SERVER
+	   ,LINK_STD_SELF_SERVER  
+//    //SET_ACTL_MEM_SERVER ...moved to rules to use sticky defaults
+       ,DMN_ACTL_MEM_SERVER
+}

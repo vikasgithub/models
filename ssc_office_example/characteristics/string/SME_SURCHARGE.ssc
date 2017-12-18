@@ -1,0 +1,7 @@
+characteristic SME_SURCHARGE {
+	name "Variant condition"
+	textLength 26
+	caseSensitive
+	multiValue
+	reference table 'SDCOM' field 'VKOND'
+}

@@ -1,0 +1,6 @@
+characteristic RC_SDCOM_VKOND {
+	names
+		EN 'Variant Condition'
+	textLength 30 multiValue
+	reference table 'SDCOM' field 'VKOND'
+}

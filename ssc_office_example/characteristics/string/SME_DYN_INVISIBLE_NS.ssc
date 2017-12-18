@@ -1,0 +1,7 @@
+characteristic SME_DYN_INVISIBLE_NS {
+	name "hide type"
+	textLength 3
+	values
+		'YES' name 'yes',
+		'NO' name 'no'
+}

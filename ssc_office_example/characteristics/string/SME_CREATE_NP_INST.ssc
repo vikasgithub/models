@@ -1,0 +1,11 @@
+cstic SME_CREATE_NP_INST {
+	name "create NP_INST"
+	textLength 30
+	multiValue
+	values
+		"SME_NP_INST_1",
+		"SME_NP_INST_2",
+		"SME_NP_INST_3",
+		"SME_NP_INST_4",
+		"SME_NP_INST_5",
+}

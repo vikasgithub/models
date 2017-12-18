@@ -1,0 +1,5 @@
+characteristic SME_MEMORY_SIZE_F {
+	name 'Memory size'
+	numericLength 15 decimalPlaces 0
+	restrictable
+}

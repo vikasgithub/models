@@ -1,0 +1,8 @@
+class HSS_ANY {
+	name "HSS_ANY" 
+	characteristics
+		HAS_PART_SD_SOFT invisible,
+		IS_PART_OF_SD_SOFT invisible,
+		HAS_PART_SD_HARD invisible,
+		IS_PART_OF_SD_HARD invisible,
+}

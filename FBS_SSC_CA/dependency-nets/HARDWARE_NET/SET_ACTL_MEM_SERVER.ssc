@@ -1,0 +1,146 @@
+///* STD_SELF */
+//constraint ACTL_MEM_STD_SELF {
+//  objects:
+//    ?SRV is_a (300)SERVER
+//      where ?S = SERVER_IN_SOL_ADT
+//
+//  condition:
+//    ?SRV.USER_TYPE = 'STD_SELF'
+//    and (?SRV.INST_NUM < ?SRV.MAX_INST_NUM  or
+//         ?SRV.INST_NUM = ?SRV.MAX_INST_NUM) 
+//
+//  restrictions:  
+//    // spread the memory evenly across the servers; unless the user sets the value  
+//    ?SRV.ACTL_MEM = ?S.REQ_STD_SELF_MEM / ?S.REQ_STD_SELF_NUM
+//        if ?SRV.SPEC_MEM <> 'USER'
+//        
+//    ,?SRV.domain ACTL_MEM <= ?SRV.MAX_MEMORY    
+//  inferences:
+//     ?SRV.ACTL_MEM
+//    
+//  explanations: 
+//    "value Actual Memory set on Server" 
+//  } 
+// 
+//      
+///* SCM_SELF */ 
+//constraint ACTL_MEM_SCM_SELF {
+//  objects:
+//    ?SRV is_a (300)SERVER
+//      where ?S = SERVER_IN_SOL_ADT
+//
+//  condition:
+//    ?SRV.USER_TYPE = 'SCM_SELF'
+//    and (?SRV.INST_NUM < ?SRV.MAX_INST_NUM  or
+//         ?SRV.INST_NUM = ?SRV.MAX_INST_NUM)
+//
+//  restrictions:  
+//    // spread the memory evenly across the servers; unless the user sets the value  
+//    ?SRV.ACTL_MEM = ?S.REQ_SCM_SELF_MEM / ?S.REQ_SCM_SELF_NUM
+//        if ?SRV.SPEC_MEM <> 'USER'
+//        
+//    ,?SRV.domain ACTL_MEM <= ?SRV.MAX_MEMORY    
+// 
+//  inferences:
+//     ?SRV.ACTL_MEM
+//    
+//  explanations: 
+//    "value Actual Memory set on Server" 
+//  }
+//       
+///* PM_SELF */    
+//constraint ACTL_MEM_PM_SELF {
+//  objects:
+//    ?SRV is_a (300)SERVER
+//      where ?S = SERVER_IN_SOL_ADT
+//
+//  condition:
+//    ?SRV.USER_TYPE = 'PM_SELF'
+//    and (?SRV.INST_NUM < ?SRV.MAX_INST_NUM  or
+//         ?SRV.INST_NUM = ?SRV.MAX_INST_NUM)
+//
+//  restrictions:  
+//    // spread the memory evenly across the servers; unless the user sets the value  
+//    ?SRV.ACTL_MEM = ?S.REQ_PM_SELF_MEM / ?S.REQ_PM_SELF_NUM
+//        if ?SRV.SPEC_MEM <> 'USER'
+//        
+//    ,?SRV.domain ACTL_MEM <= ?SRV.MAX_MEMORY    
+//  inferences:
+//     ?SRV.ACTL_MEM
+//    
+//  explanations: 
+//    "value Actual Memory set on Server" 
+//  }
+//       
+///* CRM_SALES */    
+//constraint ACTL_MEM_CRM_SALES {
+//  objects:
+//    ?SRV is_a (300)SERVER
+//      where ?S = SERVER_IN_SOL_ADT
+//
+//  condition:
+//    ?SRV.USER_TYPE = 'CRM_SALES'
+//    and (?SRV.INST_NUM < ?SRV.MAX_INST_NUM  or
+//         ?SRV.INST_NUM = ?SRV.MAX_INST_NUM)
+//
+//  restrictions:  
+//    // spread the memory evenly across the servers; unless the user sets the value  
+//    ?SRV.ACTL_MEM = ?S.REQ_CRM_SALES_MEM / ?S.REQ_CRM_SALES_NUM
+//        if ?SRV.SPEC_MEM <> 'USER'
+//        
+//    ,?SRV.domain ACTL_MEM <= ?SRV.MAX_MEMORY    
+//  inferences:
+//     ?SRV.ACTL_MEM
+//    
+//  explanations: 
+//    "value Actual Memory set on Server" 
+//    }
+//
+///* STD_SALES */    
+// constraint ACTL_MEM_STD_SALES {
+//  objects:
+//    ?SRV is_a (300)SERVER
+//      where ?S = SERVER_IN_SOL_ADT
+//
+//  condition:
+//    ?SRV.USER_TYPE = 'STD_SALES'
+//    and (?SRV.INST_NUM < ?SRV.MAX_INST_NUM  or
+//         ?SRV.INST_NUM = ?SRV.MAX_INST_NUM)
+//
+//  restrictions:  
+//    // spread the memory evenly across the servers; unless the user sets the value  
+//    ?SRV.ACTL_MEM = ?S.REQ_STD_SALES_MEM / ?S.REQ_STD_SALES_NUM
+//        if ?SRV.SPEC_MEM <> 'USER'
+//        
+//    ,?SRV.domain ACTL_MEM <= ?SRV.MAX_MEMORY    
+//  inferences:
+//     ?SRV.ACTL_MEM
+//    
+//  explanations: 
+//    "value Actual Memory set on Server"     
+//  }
+//       
+///* SCM_SALES */    
+// constraint ACTL_MEM_SCM_SALES {
+//  objects:
+//    ?SRV is_a (300)SERVER
+//      where ?S = SERVER_IN_SOL_ADT
+//
+//  condition:
+//    ?SRV.USER_TYPE = 'SCM_SALES'
+//    and (?SRV.INST_NUM < ?SRV.MAX_INST_NUM  or
+//         ?SRV.INST_NUM = ?SRV.MAX_INST_NUM)
+//
+//  restrictions:  
+//    // spread the memory evenly across the servers; unless the user sets the value  
+//    ?SRV.ACTL_MEM = ?S.REQ_SCM_SALES_MEM / ?S.REQ_SCM_SALES_NUM
+//        if ?SRV.SPEC_MEM <> 'USER'
+//        
+//    ,?SRV.domain ACTL_MEM <= ?SRV.MAX_MEMORY    
+//  inferences:
+//     ?SRV.ACTL_MEM
+//    
+//  explanations: 
+//    "value Actual Memory set on Server" 
+//} 
+// 

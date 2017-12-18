@@ -1,0 +1,4 @@
+cstic SME_NO_ITEMS_NF {
+	name 'Number of items'
+	numericLength 15 decimalPlaces 0
+}

@@ -1,0 +1,3 @@
+class SME_LAPTOP extends SME_COMPUTER {
+	name 'Laptop'
+}

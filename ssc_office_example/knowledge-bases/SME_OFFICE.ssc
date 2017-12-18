@@ -1,0 +1,9 @@
+knowledgeBase SME_OFFICE {
+	version "0.0.0.3"
+	tasks
+		SME_OFFICE_TSK
+	profiles
+		name 'SME_OFFICE_PRF' material SME_OFFICE
+	
+	
+}

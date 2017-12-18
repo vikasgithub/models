@@ -1,0 +1,7 @@
+constraint SME_WORKPLACE_QUANTITY_CS {
+	objects:
+		?W is_a (300)SME_WORKPLACE
+
+	restrictions:
+		?W.SME_COMPONENT_QUANTITY = ?W.SME_QUANTITY
+}

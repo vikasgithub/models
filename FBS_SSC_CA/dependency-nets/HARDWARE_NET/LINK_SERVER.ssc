@@ -1,0 +1,107 @@
+/* STD_SELF */
+constraint LINK_STD_SELF_SERVER {
+   objects:
+    
+    ?SRV is_a (300)SERVER
+    where ?S = SERVER_IN_SOL_ADT
+ 
+   condition
+    ?SRV.USER_TYPE = 'STD_SELF'
+    
+   restrictions:
+    ?S.HAS_PART_SD_SOFT = ?SRV,     
+    ?S.STD_SELF_SERVERS_ADT = ?SRV
+  
+  explanations: 
+    "ADT link from solution to servers."
+}
+
+/* SCM_SELF */
+constraint LINK_SCM_SELF_SERVER {
+   objects:
+    
+    ?SRV is_a (300)SERVER
+    where ?S = SERVER_IN_SOL_ADT
+
+   condition
+    ?SRV.USER_TYPE = 'SCM_SELF'
+  
+ restrictions:
+    ?S.HAS_PART_SD_SOFT = ?SRV,
+    ?S.SCM_SELF_SERVERS_ADT = ?SRV
+
+  explanations: 
+    "ADT link from solution to servers."
+}
+
+/* PM_SELF */
+constraint LINK_PM_SELF_SERVER {
+   objects:
+    
+    ?SRV is_a (300)SERVER
+    where ?S = SERVER_IN_SOL_ADT
+
+   condition
+    ?SRV.USER_TYPE = 'PM_SELF'
+  
+   restrictions:
+    ?S.HAS_PART_SD_SOFT = ?SRV,
+     
+    ?S.PM_SELF_SERVERS_ADT = ?SRV
+    
+   explanations: 
+    "ADT link from solution to servers."
+}
+
+/* CRM_SALES */
+constraint LINK_CRM_SALES_SERVER {
+   objects:
+    
+    ?SRV is_a (300)SERVER
+    where ?S = SERVER_IN_SOL_ADT
+
+   condition
+    ?SRV.USER_TYPE = 'CRM_SALES'
+  
+ restrictions:
+    ?S.HAS_PART_SD_SOFT = ?SRV,  
+    ?S.CRM_SALES_SERVERS_ADT = ?SRV
+    
+  explanations: 
+    "ADT link from solution to servers."
+}
+/* STD_SALES  */
+constraint LINK_STD_SALES_SERVER {
+   objects:
+    
+    ?SRV is_a (300)SERVER
+    where ?S = SERVER_IN_SOL_ADT
+
+   condition
+    ?SRV.USER_TYPE = 'STD_SALES'
+  
+ restrictions:
+    ?S.HAS_PART_SD_SOFT = ?SRV,
+    ?S.STD_SALES_SERVERS_ADT = ?SRV
+    
+  explanations: 
+    "ADT link from solution to servers."
+}
+
+/* SCM_SALES  */
+constraint LINK_SCM_SALES_SERVER {
+   objects:
+    
+    ?SRV is_a (300)SERVER
+    where ?S = SERVER_IN_SOL_ADT
+
+   condition
+    ?SRV.USER_TYPE = 'SCM_SALES'
+  
+ restrictions:
+    ?S.HAS_PART_SD_SOFT = ?SRV,
+    ?S.SCM_SALES_SERVERS_ADT = ?SRV
+    
+  explanations: 
+    "ADT link from solution to servers."
+}

@@ -1,0 +1,4 @@
+characteristic SME_WORKPLACE_A {
+	name 'Workplace'
+	classType SME_WORKPLACE
+}

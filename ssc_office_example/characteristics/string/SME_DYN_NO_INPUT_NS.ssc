@@ -1,0 +1,7 @@
+characteristic SME_DYN_NO_INPUT_NS {
+	name "lock type"
+	textLength 3
+	values
+		'YES' name 'yes',
+		'NO' name 'no'
+}

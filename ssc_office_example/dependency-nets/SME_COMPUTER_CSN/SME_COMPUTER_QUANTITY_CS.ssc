@@ -1,0 +1,7 @@
+constraint SME_COMPUTER_QUANTITY_CS {
+	objects:
+		?C is_a (300)SME_COMPUTER
+
+	restrictions:
+		?C.SME_COMPONENT_QUANTITY = ?C.SME_QUANTITY
+}

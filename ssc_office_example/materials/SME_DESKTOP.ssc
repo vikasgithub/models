@@ -1,0 +1,7 @@
+material SME_DESKTOP {
+	name 'Desktop PC'
+	classes
+		SME_DESKTOP
+	boms
+		SME_DESKTOP
+}

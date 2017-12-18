@@ -1,0 +1,5 @@
+characteristic SME_WORKPLACES_MA {
+	name 'Workplaces'
+	classType SME_WORKPLACE
+	multiValue
+}

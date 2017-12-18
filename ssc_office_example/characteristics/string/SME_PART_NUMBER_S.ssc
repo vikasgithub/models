@@ -1,0 +1,4 @@
+characteristic SME_PART_NUMBER_S {
+	name 'Part number'
+	textLength 30
+}

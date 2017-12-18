@@ -1,0 +1,13 @@
+class SME_COMPUTER extends SME_CONTAINMENT {
+	name 'Computer'
+	characteristics
+		SME_QUANTITY defaultValues (1),
+		SME_COMPONENT_QUANTITY noinput invisible,
+		SME_COMPUTER_TYPE_S required,
+		SME_PROCESSOR_S required,
+		SME_MEMORY_S required,
+		SME_MEMORY_SIZE_F invisible required,
+		SME_MEMORY_SPEED_S invisible required,
+		SME_VIDEO_CARD_S required,
+		SME_SURCHARGE
+}
